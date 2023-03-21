@@ -1,0 +1,33 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    max-width: 335px;
+
+}
+
+
+
+@container (width <=375px) {
+    .login {
+        padding: 10px;
+    }
+}
+
+.title {
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.forget_password {
+    font-size: 12px;
+    text-align: end;
+    margin: 0 10px;
+    color: #5F5F5F;
+}

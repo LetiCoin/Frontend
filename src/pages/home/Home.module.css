@@ -1,0 +1,17 @@
+.header {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #F5F5F5;
+}
+
+.logo {
+    color: #1c1c1c;
+    font-family: 'Nunito', sans-serif;
+    font-size: 60px;
+    margin: 0 20px;
+}
+
+.subtext {
+    font-size: 20px;
+}
