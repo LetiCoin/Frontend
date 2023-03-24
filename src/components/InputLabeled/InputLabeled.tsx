@@ -1,5 +1,5 @@
 import React from 'react'
-import css from "./Input.module.css"
+import css from "./InputLabeled.module.css"
 
 
 type Props = JSX.IntrinsicElements['input'] & {
@@ -7,7 +7,7 @@ type Props = JSX.IntrinsicElements['input'] & {
 }
 
 
-const Input = ({ label, type, placeholder, value }: Props) => {
+const InputLabeled = ({ label, type, placeholder, value }: Props) => {
     return (
         <label>
             <div className={css.label}>{label}</div>
@@ -16,4 +16,4 @@ const Input = ({ label, type, placeholder, value }: Props) => {
     )
 }
 
-export default Input
+export default InputLabeled
