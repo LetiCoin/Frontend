@@ -1,7 +1,9 @@
 import { paths } from "../../apiconfig";
 import { ISetToken } from "@/api/Token/token";
+import { Dispatch, SetStateAction } from "react";
 
-export async function register(email: string, login: string, password: string, role: string, setToken: ISetToken, setError) {
+
+export const register = async (email: string, login: string, password: string, role: string, setToken: ISetToken, setError: Dispatch<SetStateAction<string>>) => {
     try {
 
         const response = await fetch(paths.login, {
@@ -20,12 +22,14 @@ export async function register(email: string, login: string, password: string, r
         const data = await response.json();
 
         if (data) {
-            const accessToken = data.accessToken;
-            const refreshToken = data.refreshToken;
+            const accessToken: string = data.accessToken;
+            const refreshToken: string = data.refreshToken;
             setToken({ accessToken, refreshToken });
             console.log(data);
         }
-    } catch (err) {
-        setError(err.message);
+    } catch (err: unknown) {
+        if (err instanceof Error) {
+            setError(err.message);
+        }
     }
 }

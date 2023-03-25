@@ -1,8 +1,8 @@
 import { Dispatch, useState } from "react";
 
 export type Token = {
-    accessTokens?: string[];
-    refreshTokens?: string[];
+    accessToken?: string;
+    refreshToken?: string;
 };
 
 export interface IUseToken {
@@ -19,9 +19,11 @@ const useToken: IUseToken = () => {
             return;
         }
         const tokenString = localStorage.getItem("token");
-        const userToken = JSON.parse(tokenString);
+        const userToken = tokenString ? JSON.parse(tokenString) : undefined;
         return userToken;
     };
+
+    const [token, setToken] = useState(getToken());
 
     const saveToken: ISetToken = (userToken) => {
         if (typeof window === "undefined") {
@@ -31,7 +33,6 @@ const useToken: IUseToken = () => {
         setToken(userToken);
     };
 
-    const [token, setToken] = useState(getToken());
     return [token, saveToken];
 };
 
