@@ -1,7 +1,7 @@
 import css from "./Login.module.css"
 import Button from '@/components/Button/Button'
 import InputLabeled from '@/components/InputLabeled/InputLabeled'
-import { useState } from "react"
+import { FormEventHandler, useState } from "react"
 import { ISetToken } from "@/api/Token/token"
 import { register } from "../../api/register"
 
@@ -17,7 +17,7 @@ const Singup = ({ setToken }: Props) => {
     const [role, setRole] = useState("")
     const [error, setError] = useState("")
 
-    const handleSubmit = async (e) => {
+    const handleSubmit: FormEventHandler = async (e) => {
         e.preventDefault()
         await register(email, login, password, role, setToken, setError)
     }
