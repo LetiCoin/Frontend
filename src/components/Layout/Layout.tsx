@@ -9,7 +9,6 @@ const Layout = ({ children }: Props) => {
         <div className={css.layout}>
             <div className={css.container}>
                 {children}
-
             </div>
         </div>
     )
