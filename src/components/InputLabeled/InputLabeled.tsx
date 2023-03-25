@@ -6,11 +6,11 @@ type Props = JSX.IntrinsicElements['input'] & {
 }
 
 
-const InputLabeled = ({ label, type, placeholder, value }: Props) => {
+const InputLabeled = ({ label, type, placeholder, value, ...other }: Props) => {
     return (
         <label>
             <div className={css.label}>{label}</div>
-            <input className={css.input} type={type || "text"} placeholder={placeholder} value={value} />
+            <input className={css.input} type={type || "text"} placeholder={placeholder} {...other} />
         </label>
     )
 }
