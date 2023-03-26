@@ -2,26 +2,22 @@ import { paths } from "@/configs/apiconfig";
 import { ISetToken } from "@/utils/Token/token";
 import { Dispatch, SetStateAction } from "react";
 
-const register = async (
-    email: string,
+const loginRequest = async (
     login: string,
     password: string,
-    role: string,
     setToken: ISetToken,
     setError: Dispatch<SetStateAction<string>>
 ) => {
     try {
-        const response = await fetch(paths.register, {
+        const response = await fetch(paths.login, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
 
             body: JSON.stringify({
-                email,
                 login,
                 password,
-                role,
             }),
         });
         const data = await response.json();
@@ -39,4 +35,4 @@ const register = async (
     }
 };
 
-export default register;
+export default loginRequest;

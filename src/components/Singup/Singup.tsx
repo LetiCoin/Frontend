@@ -3,7 +3,7 @@ import Button from '@/components/Button/Button'
 import InputLabeled from '@/components/InputLabeled/InputLabeled'
 import { FormEventHandler, useState } from "react"
 import { ISetToken } from "@/utils/Token/token"
-import { register } from "../../utils/register"
+import register from "@/utils/register"
 
 interface Props {
     setToken: ISetToken;

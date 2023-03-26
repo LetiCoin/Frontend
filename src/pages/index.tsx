@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout/Layout';
-import { SingupLayout } from '@/components/SingupLayout/LoginLayout';
+import { SingupLayout } from '@/components/SingupLayout/SingupLayout';
 import css from './Home.module.css';
 import useToken from '@/utils/Token/token';
 
