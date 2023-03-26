@@ -1,4 +1,4 @@
-import useToken from '@/api/Token/token';
+import useToken from '@/utils/Token/token';
 import { SingupLayout } from '@/components/SingupLayout/LoginLayout';
 
 

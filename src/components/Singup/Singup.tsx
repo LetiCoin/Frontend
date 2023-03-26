@@ -2,8 +2,8 @@ import css from "./Login.module.css"
 import Button from '@/components/Button/Button'
 import InputLabeled from '@/components/InputLabeled/InputLabeled'
 import { FormEventHandler, useState } from "react"
-import { ISetToken } from "@/api/Token/token"
-import { register } from "../../api/register"
+import { ISetToken } from "@/utils/Token/token"
+import { register } from "../../utils/register"
 
 interface Props {
     setToken: ISetToken;

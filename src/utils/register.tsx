@@ -1,5 +1,5 @@
 import { paths } from "../../apiconfig";
-import { ISetToken } from "@/api/Token/token";
+import { ISetToken } from "@/utils/Token/token";
 import { Dispatch, SetStateAction } from "react";
 
 

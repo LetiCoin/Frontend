@@ -1,6 +1,6 @@
 import Singup from '@/components/Singup/Singup';
 import Layout from '@/components/Layout/Layout';
-import { ISetToken } from '@/api/Token/token';
+import { ISetToken } from '@/utils/Token/token';
 
 interface Props {
     setToken: ISetToken;

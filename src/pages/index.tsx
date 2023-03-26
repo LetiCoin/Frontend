@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout/Layout';
 import { SingupLayout } from '@/components/SingupLayout/LoginLayout';
 import css from './Home.module.css';
-import useToken from '@/api/Token/token';
+import useToken from '@/utils/Token/token';
 
 
 
