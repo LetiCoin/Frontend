@@ -1,9 +1,8 @@
-const url = "http://localhost:3000";
 const apiconfig = {
-    url: url,
+    url: process.env.NEXT_PUBLIC_BASE_API_DOMAIN || "",
     paths: {
-        register: `${url}/auth/register`,
-        login: `${url}/auth/login`,
+        login: process.env.NEXT_PUBLIC_LOGIN_API_URL || "",
+        register: process.env.NEXT_PUBLIC_REGISTER_API_URL || "",
     },
 };
 
