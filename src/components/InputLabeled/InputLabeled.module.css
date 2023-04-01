@@ -4,21 +4,28 @@
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
-    margin: 0 10px 2px;    
+    margin: 0 10px 2px;
 }
 
 .input {
     background: rgba(255, 255, 255, 0.4);
     color: var(--text-color-primary);
-    border: 1px solid #FFFFFF;
+    border: 0.1em solid #FFFFFF;
     border-radius: 12px;
     height: 40px;
     padding: 6px 12px;
     font-size: 16px;
     font-family: 'Inter';
     width: 100%;
+    outline: none;
+    transition: border 0.3s ease-in-out;
 }
 
 .input::placeholder {
     color: #9F9F9F;
+}
+
+.input:focus-visible {
+    border-color: var(--element-color-action);
+    
 }

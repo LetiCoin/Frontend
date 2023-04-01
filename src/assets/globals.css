@@ -2,10 +2,18 @@
 
 
 :root {
+    --color-heliotrope-600: hsla(288, 60%, 54%, 1);
+    --color-pool-water-600: hsla(213, 79%, 50%, 1);
+
+
+
     --text-color-primary: hsla(216, 71%, 1%, 1);
     --text-color-secondary: hsla(213, 13%, 37%, 1);
 
-    --background-gradient: linear-gradient(180deg, #1B75E2 0%, #B544D0 100%);
+    --background-gradient: linear-gradient(180deg, var(--color-pool-water-600) 0%, var(--color-heliotrope-600) 100%);
+
+    --element-color-action: var(--color-pool-water-600);
+
 
 }
 
