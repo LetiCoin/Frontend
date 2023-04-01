@@ -32,6 +32,7 @@ const Login = ({ setToken }: Props) => {
                 onChange={
                     (e) => setLogin(e.currentTarget.value)
                 }
+                required
             />
             <InputLabeled
                 label='Пароль'
@@ -40,6 +41,7 @@ const Login = ({ setToken }: Props) => {
                 onChange={
                     (e) => setPassword(e.currentTarget.value)
                 }
+                required
             />
             <a className={css.forget_password} href="forget_password">Забыли пароль?</a>
             <Button>Войти</Button>

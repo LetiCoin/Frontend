@@ -27,12 +27,14 @@ const Singup = ({ setToken }: Props) => {
         <form className={css.login} onSubmit={handleSubmit}>
             <h1 className={css.title}>Зарегистрируйтесь на LETICOIN</h1>
             <InputLabeled
+                type="email"
                 label='Email'
                 placeholder='myemail@gmail.com'
                 value={email}
                 onChange={
                     (e) => setEmail(e.currentTarget.value)
                 }
+                required
             />
             <InputLabeled
                 label='Логин'
@@ -41,6 +43,7 @@ const Singup = ({ setToken }: Props) => {
                 onChange={
                     (e) => setLogin(e.currentTarget.value)
                 }
+                required
             />
             <InputLabeled
                 label='Пароль'
@@ -49,6 +52,7 @@ const Singup = ({ setToken }: Props) => {
                 onChange={
                     (e) => setPassword(e.currentTarget.value)
                 }
+                required
             />
             <InputLabeled
                 label='Роль'
@@ -56,6 +60,7 @@ const Singup = ({ setToken }: Props) => {
                 onChange={
                     (e) => setRole(e.currentTarget.value)
                 }
+                required
             />
             <a className={css.forget_password} href="forget_password">Забыли пароль?</a>
             <Button>Войти</Button>
