@@ -1,0 +1,36 @@
+.header {
+    height: 60px;
+
+}
+
+.header__inner {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.burger {
+    display: none;
+
+}
+
+.login {
+    padding: 8px 16px;
+
+    width: 86px;
+    height: 34px;
+
+    /* element/01 */
+
+    background: var(--element-color-01);
+    border-radius: 12px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    text-decoration: none;
+}
