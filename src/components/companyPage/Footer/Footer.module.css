@@ -1,0 +1,31 @@
+/* TODO add gray opasity to loco and socials */
+
+.footer {
+    height: 65px;
+
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {}
+
+.social__item {}
+
+.socials {}
+
+.socials__items {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}
+
+.telegram {}
+
+.vk {}

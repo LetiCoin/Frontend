@@ -1,0 +1,75 @@
+.first_screen {
+    height: calc(100vh - 60px);
+
+}
+
+.screen_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px 10px;
+    gap: 45px;
+}
+
+.screen_text_item {}
+
+.title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 110%;
+    /* or 26px */
+
+    text-align: center;
+
+    /* text/03 */
+
+    color: var(--text-color-03);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 0px 30px;
+    gap: 4px;
+}
+
+.button {
+    padding: 8px 16px;
+    border-radius: 12px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 110%;
+
+    cursor: pointer;
+}
+
+.button_first {
+    background: var(--element-color-action-01);
+    border: none;
+    color: #fff;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 110%;
+}
+
+.button_second {
+    background: #fff;
+    border: 1px solid var(--element-color-action-01);
+    color: var(--element-color-action-01);
+}
+
+.coin_image {
+    text-align: center;
+    position: relative;
+    width: min(50vh, 50vw);
+    max-height: min(50vh, 50vw);
+    aspect-ratio: 1;
+}
