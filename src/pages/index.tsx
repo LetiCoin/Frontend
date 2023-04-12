@@ -15,7 +15,7 @@ function HomePage() {
         if (!token) {                   // TODO write normal session check. This is very very ease to bypass.
             router.push('/login');
         }
-    }, [])
+    }, [token, router])
 
     return (
         <Layout>
