@@ -13,19 +13,19 @@ export const Footer = () => (
             <div className={css.footer__inner}>
 
                 <div className={css.logo}>
-                    <Image alt='Logo Leticoin' src={logo}></Image>
+                    <Image alt='Logo Leticoin' src={logo} height={42}></Image>
                 </div>
                 <div className={css.socials}>
                     <ul className={css.socials__items}>
                         <li className={css.social__item}>
                             <a className={css.vk} href="">
-                                <Image alt='Мы во Вконтакте' src={vkIcon}></Image>
+                                <Image alt='Мы во Вконтакте' src={vkIcon} width={38} height={38}></Image>
                             </a>
 
                         </li>
                         <li className={css.social__item}>
                             <a className={css.telegram} href="">
-                                <Image alt='Мы во Телеграме' src={telegramIcon}></Image>
+                                <Image alt='Мы во Телеграме' src={telegramIcon} width={42} height={42}></Image>
                             </a>
                         </li>
                     </ul>
