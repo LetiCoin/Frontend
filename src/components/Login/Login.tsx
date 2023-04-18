@@ -1,7 +1,7 @@
 import css from "./Login.module.css"
 import Button from '@/components/Button/Button'
 import InputLabeled from '@/components/InputLabeled/InputLabeled'
-import { FormEventHandler, useState } from "react"
+import { FormEventHandler, useRef, useState } from "react"
 import { ISetToken } from "@/utils/Token/token"
 import loginRequest from "@/utils/login"
 
@@ -11,16 +11,29 @@ interface Props {
 
 
 const Login = ({ setToken }: Props) => {
+
     const [login, setLogin] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
+    const loginInputRef = useRef<HTMLInputElement>(null)
+    const passwordInputRef = useRef<HTMLInputElement>(null)
+
 
     const handleSubmit: FormEventHandler = async (e) => {
         e.preventDefault()
-
+        if (!loginInputRef || !loginInputRef.current) {
+            throw new TypeError("loginInputRef is not valid")
+        }
+        if (!passwordInputRef || !passwordInputRef.current) {
+            throw new TypeError("passwordInputRef is not valid")
+        }
+        setLogin(loginInputRef.current.value)
+        setPassword(passwordInputRef.current.value)
         await loginRequest(login, password, setToken, setError)
-
     }
+
+
+
     return (
 
         <form className={css.login} onSubmit={handleSubmit}>
@@ -28,6 +41,7 @@ const Login = ({ setToken }: Props) => {
             <InputLabeled
                 label='Логин'
                 placeholder='superman'
+                ref={loginInputRef}
                 value={login}
                 onChange={
                     (e) => setLogin(e.currentTarget.value)
@@ -37,6 +51,7 @@ const Login = ({ setToken }: Props) => {
             <InputLabeled
                 label='Пароль'
                 type='password'
+                ref={passwordInputRef}
                 value={password}
                 onChange={
                     (e) => setPassword(e.currentTarget.value)
